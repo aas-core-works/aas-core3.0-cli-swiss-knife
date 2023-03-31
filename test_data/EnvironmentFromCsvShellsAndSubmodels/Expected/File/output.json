@@ -1,0 +1,45 @@
+﻿{
+  "assetAdministrationShells": [
+    {
+      "id": "urn:example:shell:1",
+      "assetInformation": {
+        "assetKind": "Instance"
+      },
+      "submodels": [
+        {
+          "type": "ModelReference",
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "urn:example:submodel:1"
+            }
+          ]
+        }
+      ],
+      "modelType": "AssetAdministrationShell"
+    }
+  ],
+  "submodels": [
+    {
+      "id": "urn:example:submodel:1",
+      "submodelElements": [
+        {
+          "idShort": "something",
+          "semanticId": {
+            "type": "ModelReference",
+            "keys": [
+              {
+                "type": "ConceptDescription",
+                "value": "urn:example:cd:1"
+              }
+            ]
+          },
+          "value": "https://example.com/something",
+          "contentType": "text/plain",
+          "modelType": "File"
+        }
+      ],
+      "modelType": "Submodel"
+    }
+  ]
+}

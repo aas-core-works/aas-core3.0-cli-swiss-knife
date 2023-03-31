@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+    types: [opened, synchronize, reopened, edited]
+
+  push:
+    branches:
+      - main
+
+jobs:
+  Execute-continuous-integration:
+    runs-on: windows-latest
+    if: contains(github.event.pull_request.body, 'The workflow check was intentionally skipped.') == false
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Display repository name
+        env:
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          Write-Host "The repository is: ${env:REPOSITORY}"
+
+      - name: Install NET 6
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '6.0.201'
+
+      - name: Install tools
+        working-directory: src
+        run: dotnet tool restore
+
+      - name: Check
+        working-directory: src
+        run: powershell .\Check.ps1

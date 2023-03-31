@@ -1,0 +1,2 @@
+Asset Administration Shell ID,Submodel ID,Submodel Element,ID-short,Value,Data Type,Content Type,Min,Max,Semantic ID
+urn:example:shell:1,urn:example:submodel:1,Property,something,3,xs:int,,,,urn:example:cd:1

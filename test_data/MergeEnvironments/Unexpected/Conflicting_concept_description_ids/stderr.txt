@@ -1,0 +1,1 @@
+﻿<model.json>: Conflict in IDs of concept descriptions; the concept description with the ID urn:example:conceptDescription:1 is also defined in <model-duplicate.json>

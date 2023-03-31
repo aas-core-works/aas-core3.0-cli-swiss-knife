@@ -1,0 +1,1 @@
+﻿<model.json>: JSON parsing failed: Required property "contentType" is missing at submodels[0].submodelElements[0]

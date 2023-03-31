@@ -1,0 +1,4 @@
+﻿There were one or more errors:
+* In <input.csv>: In row 2 and column Max: Expected empty
+* In <input.csv>: In row 2 and column Min: Expected empty
+* In <input.csv>: In row 2 and column Data Type: Expected empty
