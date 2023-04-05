@@ -1,0 +1,11 @@
+﻿There were one or more errors:
+* In <input.csv>: Expected the column 1 to have the header Asset Administration Shell ID, but got Asset Administration Shell IDX
+* In <input.csv>: Expected the column 2 to have the header Submodel ID, but got Submodel IDX
+* In <input.csv>: Expected the column 3 to have the header Submodel Element, but got Submodel ElementX
+* In <input.csv>: Expected the column 4 to have the header ID-short, but got ID-shortX
+* In <input.csv>: Expected the column 5 to have the header Value, but got ValueX
+* In <input.csv>: Expected the column 6 to have the header Data Type, but got Data TypeX
+* In <input.csv>: Expected the column 7 to have the header Content Type, but got Content TypeX
+* In <input.csv>: Expected the column 8 to have the header Min, but got MinX
+* In <input.csv>: Expected the column 9 to have the header Max, but got MaxX
+* In <input.csv>: Expected the column 10 to have the header Semantic ID, but got Semantic IDX

@@ -1,0 +1,1 @@
+﻿<model.json>: Conflict in IDs of submodels; the submodel with the ID urn:example:submodel:1 is also defined in <model-duplicate.json>

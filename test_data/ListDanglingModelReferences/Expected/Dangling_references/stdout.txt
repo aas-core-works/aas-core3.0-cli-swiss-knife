@@ -1,0 +1,2 @@
+﻿<model.json>#assetAdministrationShells[0].submodels[0]: Dangling reference ["urn:example:submodel:1WRONG"]
+<model.json>#submodels[0].submodelElements[0].semanticId: Dangling reference ["urn:example:conceptDescription:1WRONG"]

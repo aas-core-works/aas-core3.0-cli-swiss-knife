@@ -1,0 +1,8 @@
+﻿There were one or more errors:
+* In <input.csv>: Expected the column 1 to have the header ID, but got IDX
+* In <input.csv>: Expected the column 2 to have the header Preferred Name, but got Preferred NameX
+* In <input.csv>: Expected the column 3 to have the header Short Name, but got Short NameX
+* In <input.csv>: Expected the column 4 to have the header Unit, but got UnitX
+* In <input.csv>: Expected the column 5 to have the header Symbol, but got SymbolX
+* In <input.csv>: Expected the column 6 to have the header Definition, but got DefinitionX
+* In <input.csv>: Expected the column 7 to have the header Source of Definition, but got Source of DefinitionX

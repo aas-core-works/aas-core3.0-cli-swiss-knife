@@ -1,0 +1,4 @@
+﻿<model.json>: submodels[0].submodelElements[0].value: Invariant violated:
+Constraint AASd-121: For References the value of type of the first key of keys shall be one of Globally Identifiables.
+<model.json>: submodels[0].submodelElements[0].value: Invariant violated:
+Constraint AASd-123: For model references the value of type of the first key of keys shall be one of AAS identifiables.

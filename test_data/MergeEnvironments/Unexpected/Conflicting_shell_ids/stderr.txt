@@ -1,0 +1,1 @@
+﻿<model.json>: Conflict in IDs of asset administration shells; the shell with the ID urn:example:shell:1 is also defined in <model-duplicate.json>

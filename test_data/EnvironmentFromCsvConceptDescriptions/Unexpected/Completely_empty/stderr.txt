@@ -1,0 +1,2 @@
+﻿There were one or more errors:
+* In <input.csv>: Failed to parse the header: Expected a header row, but got end-of-stream

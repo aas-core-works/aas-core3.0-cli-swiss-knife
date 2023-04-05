@@ -1,0 +1,3 @@
+﻿There were one or more errors:
+* In <input.csv>: In row 2 and column Data Type: Unexpected empty
+* In <input.csv>: In row 2 and column ID-short: Unexpected empty

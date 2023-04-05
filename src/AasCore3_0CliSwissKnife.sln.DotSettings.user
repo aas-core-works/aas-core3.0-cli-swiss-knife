@@ -1,0 +1,79 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=524034fa_002De94e_002D4364_002D9fb4_002D7cf72ad9a29e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;And&gt;&#xD;
+      &lt;Or&gt;&#xD;
+        &lt;And&gt;&#xD;
+          &lt;Or&gt;&#xD;
+            &lt;Project Location="C:\Users\rist\workspace\aas-core-works\aas-core3.0-cli-swiss-knife\src\CsvParsing.Tests" Presentation="&amp;lt;CsvParsing.Tests&amp;gt;" /&gt;&#xD;
+            &lt;ProjectFile&gt;FDCFDF90-4E60-4C41-AC46-6CB73CA8972A/f:TestAgainstTestData.cs&lt;/ProjectFile&gt;&#xD;
+          &lt;/Or&gt;&#xD;
+          &lt;Project Location="C:\Users\rist\workspace\aas-core-works\aas-core3.0-cli-swiss-knife\src\ListDanglingModelReferences.Tests" Presentation="&amp;lt;ListDanglingModelReferences.Tests&amp;gt;" /&gt;&#xD;
+        &lt;/And&gt;&#xD;
+        &lt;TestAncestor&gt;&#xD;
+          &lt;TestId&gt;NUnit3x::02BEE479-CA0E-47CD-BB03-C7CAD25D0474::net6.0::SplitEnvironmentForStaticHosting.Tests.TestsAgainstTestData&lt;/TestId&gt;&#xD;
+        &lt;/TestAncestor&gt;&#xD;
+      &lt;/Or&gt;&#xD;
+      &lt;Not&gt;&#xD;
+        &lt;Project Location="C:\Users\rist\workspace\aas-core-works\aas-core3.0-cli-swiss-knife\src\ListDanglingModelReferences.Tests" Presentation="&amp;lt;ListDanglingModelReferences.Tests&amp;gt;" /&gt;&#xD;
+      &lt;/Not&gt;&#xD;
+    &lt;/And&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::CAF1BCF5-723E-4C2B-A2D4-EA8B01A63767::net6.0::MergeEnvironments.Tests.TestsAgainstTestData.Test_against_recorded&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f530e5af_002Dc7eb_002D4242_002Daf46_002D7d037cdc0101/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;CsvParsing.Tests&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;Project Location="C:\Users\rist\workspace\aas-core-works\aas-core3.0-cli-swiss-knife\src\CsvParsing.Tests" Presentation="&amp;lt;CsvParsing.Tests&amp;gt;" /&gt;&#xD;
+    &lt;ProjectFile&gt;FDCFDF90-4E60-4C41-AC46-6CB73CA8972A/f:TestAgainstTestData.cs&lt;/ProjectFile&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestRunner/RunConfigurationFilename/@EntryValue">C:\Users\rist\workspace\aas-core-works\aas-core3.0-cli-swiss-knife\mristin.runsettings</s:String>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</wpf:ResourceDictionary>
