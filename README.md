@@ -18,13 +18,13 @@ Provide a set of command-line utilities to manipulate and convert AAS environmen
 * [aas-core3.0-sk-list-dangling-model-references]
 * [aas-core3.0-sk-split-environment-for-static-hosting]
 
-[aas-core3.0-sk-environment-from-csv-concept-descriptions]: #aas-core3.0-sk-environment-from-csv-concept-descriptions
-[aas-core3.0-sk-environment-from-csv-shells-and-submodels]: #aas-core3.0-sk-environment-from-csv-shells-and-submodels
-[aas-core3.0-sk-merge-environments]: #aas-core3.0-sk-merge-environments
-[aas-core3.0-sk-tree-shake-concept-descriptions]: #aas-core3.0-sk-tree-shake-concept-descriptions
-[aas-core3.0-sk-verify]: #aas-core3.0-sk-verify
-[aas-core3.0-sk-list-dangling-model-references]: #aas-core3.0-sk-list-dangling-model-references
-[aas-core3.0-sk-split-environment-for-static-hosting]: #aas-core3.0-sk-split-environment-for-static-hosting
+[aas-core3.0-sk-environment-from-csv-concept-descriptions]: #aas-core30-sk-environment-from-csv-concept-descriptions
+[aas-core3.0-sk-environment-from-csv-shells-and-submodels]: #aas-core30-sk-environment-from-csv-shells-and-submodels
+[aas-core3.0-sk-merge-environments]: #aas-core30-sk-merge-environments
+[aas-core3.0-sk-tree-shake-concept-descriptions]: #aas-core30-sk-tree-shake-concept-descriptions
+[aas-core3.0-sk-verify]: #aas-core30-sk-verify
+[aas-core3.0-sk-list-dangling-model-references]: #aas-core30-sk-list-dangling-model-references
+[aas-core3.0-sk-split-environment-for-static-hosting]: #aas-core30-sk-split-environment-for-static-hosting
 
 ## Quickstart
 
