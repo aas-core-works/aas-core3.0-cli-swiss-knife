@@ -157,7 +157,8 @@ If you use the toolkit often, you might want to add the directory to your [PATH]
 <!-- Help starts: out\aas-core3.0-sk-environment-from-csv-concept-descriptions.exe --help -->
 ```
 Description:
-  Translate concept descriptions, captured as a pre-defined CSV file, into an AAS environment serialized to JSON.
+  Translate concept descriptions, captured as a pre-defined CSV file, 
+  into an AAS environment serialized to JSON.
 
   The expected header is:
   ID,Preferred Name,Short Name,Unit,Symbol,Definition,Source of Definition
@@ -166,33 +167,80 @@ Usage:
   aas-core3.0-sk-environment-from-csv-concept-descriptions [options]
 
 Options:
-  --concept-descriptions <concept-descriptions> (REQUIRED)  One or more files containing the information about the concept descriptions in CSV format
-  --output <output> (REQUIRED)                              The JSON file containing the AAS Environment; if '-', output to STDOUT
-  --version                                                 Show version information
-  -?, -h, --help                                            Show help and usage information
+  --concept-descriptions <concept-descriptions> (REQUIRED)  
+    One or more files containing the information about the concept descriptions 
+    in CSV format
+  --output <output> (REQUIRED)                              
+    The JSON file containing the AAS Environment; if '-', output to STDOUT
+  --version                                                 
+    Show version information
+  -?, -h, --help                                            
+    Show help and usage information
 ```
 <!-- Help ends: out\aas-core3.0-sk-environment-from-csv-concept-descriptions.exe --help -->
+
+The tool aas-core3.0-sk-environment-from-csv-concept-descriptions converts a table to instances of [Concept Description]'s and embeds [Data Specification IEC 61360] in them.
+
+[Concept Description]: https://aas-core-works.github.io/aas-core-meta/v3/Concept_description.html
+[Data Specification IEC 61360]: https://aas-core-works.github.io/aas-core-meta/v3/Data_specification_IEC_61360.html
+
+We chose by design to put focus on the data specification.
+In particular, the column `Definition` refers to [the definition of the data specification], and *not* to the description of the concept description.
+At the moment, we leave [the description of the Concept Description] empty, but this might change in the future.
+
+[the definition of the data specification]: https://aas-core-works.github.io/aas-core-meta/v3/Data_specification_IEC_61360.html#property-definition
+[the description of the Concept Description]: https://aas-core-works.github.io/aas-core-meta/v3/Concept_description.html#property-description
+
+While data specifications allow for definitions in different languages, we assumed only English for simplicity of the entry.
+
+This interface is admittedly opinionated, and other approaches are of course equally thinkable.
+Please [create an issue] to give us your feedback how you expect this interface to look like.
+
+[create an issue]: https://github.com/aas-core-works/aas-core3.0-cli-swiss-knife/issues/new
 
 # aas-core3.0-sk-environment-from-csv-shells-and-submodels
 
 <!-- Help starts: out\aas-core3.0-sk-environment-from-csv-shells-and-submodels.exe --help -->
 ```
 Description:
-  Translate asset administration shells and submodels from a pre-defined CSV table to an AAS environment serialized to JSON.
+  Translate asset administration shells and submodels from a pre-defined CSV table to 
+  an AAS environment serialized to JSON.
 
   The expected header is:
-  Asset Administration Shell ID,Submodel ID,Submodel Element,ID-short,Value,Data Type,Content Type,Min,Max,Semantic ID
+  Asset Administration Shell ID,Submodel ID,Submodel Element,ID-short,Value,Data Type,
+  Content Type,Min,Max,Semantic ID
 
 Usage:
   aas-core3.0-sk-environment-from-csv-shells-and-submodels [options]
 
 Options:
-  --assets-and-submodels <assets-and-submodels> (REQUIRED)  One or more files containing the information about the asset administration shells and submodels in CSV format
-  --output <output> (REQUIRED)                              The JSON file containing the AAS Environment; if '-', output to STDOUT
-  --version                                                 Show version information
-  -?, -h, --help                                            Show help and usage information
+  --assets-and-submodels <assets-and-submodels> (REQUIRED)  
+    One or more files containing the information about the asset administration shells 
+    and submodels in CSV format
+  --output <output> (REQUIRED)                              
+    The JSON file containing the AAS Environment; if '-', output to STDOUT
+  --version                                                 
+    Show version information
+  -?, -h, --help                                            
+    Show help and usage information
 ```
 <!-- Help ends: out\aas-core3.0-sk-environment-from-csv-shells-and-submodels.exe --help -->
+
+With aas-core3.0-sk-environment-from-csv-shells-and-submodels, you capture asset administration shells, submodels *and* the submodel elements, all in the same line.
+The tool will automatically extract these three separate entities and associate them accordingly in the resulting AS environment.
+
+The column `Submodel Element` determines the *class* of the submodel element.
+Currently, we support [File], [Property], and [Range].
+
+[File]: https://aas-core-works.github.io/aas-core-meta/v3/File.html
+[Property]: https://aas-core-works.github.io/aas-core-meta/v3/Property.html
+[Range]: https://aas-core-works.github.io/aas-core-meta/v3/Range.html
+
+Depending on the class of the submodel element, you have to specify different columns.
+For example, the column `Semantic ID` can be specified for all the classes of submodel elements.
+However, `Content Type` is to be specified only for [File]'s, while `Min` and `Max` apply only to [Range].
+
+Please see the generated documentation of the meta-model to determine which columns are applicable: [File], [Property], [Range].  
 
 # aas-core3.0-sk-merge-environments
 
@@ -205,10 +253,14 @@ Usage:
   aas-core3.0-sk-merge-environments [options]
 
 Options:
-  --environments <environments> (REQUIRED)  Paths to two or more AAS environments serialized to JSON to be merged
-  --output <output> (REQUIRED)              Path to the merged environment; if '-', the output is written to STDOUT
-  --version                                 Show version information
-  -?, -h, --help                            Show help and usage information
+  --environments <environments> (REQUIRED)  
+    Paths to two or more AAS environments serialized to JSON to be merged
+  --output <output> (REQUIRED)              
+    Path to the merged environment; if '-', the output is written to STDOUT
+  --version                                 
+    Show version information
+  -?, -h, --help                            
+    Show help and usage information
 ```
 <!-- Help ends: out\aas-core3.0-sk-merge-environments.exe --help -->
 
@@ -217,16 +269,23 @@ Options:
 <!-- Help starts: out\aas-core3.0-sk-tree-shake-concept-descriptions.exe --help -->
 ```
 Description:
-  Remove concept descriptions which are not directly referenced as model references through semantic IDs.
+  Remove concept descriptions which are not directly referenced as model references 
+  through semantic IDs.
 
 Usage:
   aas-core3.0-sk-tree-shake-concept-descriptions [options]
 
 Options:
-  --environment <environment> (REQUIRED)  Path to the AAS environment serialized to JSON from which we remove the concept descriptions not referenced in any semantic ID
-  --output <output> (REQUIRED)            Path to the environment without unreferenced concept descriptions; if '-', the output is written to STDOUT
-  --version                               Show version information
-  -?, -h, --help                          Show help and usage information
+  --environment <environment> (REQUIRED)  
+    Path to the AAS environment serialized to JSON from which we remove 
+    the concept descriptions not referenced in any semantic ID
+  --output <output> (REQUIRED)            
+    Path to the environment without unreferenced concept descriptions; 
+    if '-', the output is written to STDOUT
+  --version                               
+    Show version information
+  -?, -h, --help                          
+    Show help and usage information
 ```
 <!-- Help ends: out\aas-core3.0-sk-tree-shake-concept-descriptions.exe --help -->
 
@@ -237,15 +296,19 @@ Options:
 Description:
   Verify that the AAS environment satisfies the meta-model constraints.
 
-  Only constraints are checked that can be enforced without external dependencies such as registry or language models.
+  Only constraints are checked that can be enforced without external dependencies 
+  such as registry or language models.
 
 Usage:
   aas-core3.0-sk-verify [options]
 
 Options:
-  --environment <environment> (REQUIRED)  Path to the AAS environment serialized to JSON to be verified
-  --version                               Show version information
-  -?, -h, --help                          Show help and usage information
+  --environment <environment> (REQUIRED)  
+  Path to the AAS environment serialized to JSON to be verified
+  -version                               
+  Show version information
+  -?, -h, --help                          
+  Show help and usage information
 ```
 <!-- Help ends: out\aas-core3.0-sk-verify.exe --help -->
 
@@ -260,9 +323,13 @@ Usage:
   aas-core3.0-sk-list-dangling-model-references [options]
 
 Options:
-  --environment <environment> (REQUIRED)  An AAS environment serialized as a JSON file to be searched for dangling model references
-  --version                               Show version information
-  -?, -h, --help                          Show help and usage information
+  --environment <environment> (REQUIRED)  
+  An AAS environment serialized as a JSON file to be searched for dangling model 
+  references
+  --version                               
+  Show version information
+  -?, -h, --help                          
+  Show help and usage information
 ```
 <!-- Help ends: out\aas-core3.0-sk-list-dangling-model-references.exe --help -->
 
@@ -271,15 +338,23 @@ Options:
 <!-- Help starts: out\aas-core3.0-sk-split-environment-for-static-hosting.exe --help -->
 ```
 Description:
-  Split an AAS environment into multiple files so that they can be readily served as static files.
+  Split an AAS environment into multiple files so that they can be readily served as 
+  static files.
 
 Usage:
   aas-core3.0-sk-split-environment-for-static-hosting [options]
 
 Options:
-  --environments <environments> (REQUIRED)  Path to the AAS environment serialized as a JSON file to be split into different files for static hosting
-  --output-dir <output-dir> (REQUIRED)      Path to the output directory
-  --version                                 Show version information
-  -?, -h, --help                            Show help and usage information
+  --environments <environments> (REQUIRED)  
+  Path to the AAS environment serialized as a JSON file to be split into different files 
+  for static hosting
+  --output-dir <output-dir> (REQUIRED)      
+  Path to the output directory
+  --version                                 
+  Show version information
+  -?, -h, --help                            
+  Show help and usage information
 ```
 <!-- Help ends: out\aas-core3.0-sk-split-environment-for-static-hosting.exe --help -->
+
+Please see [Static Hosting] for information about how to set up your web server.
