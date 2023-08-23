@@ -300,7 +300,7 @@ namespace SplitEnvironmentForStaticHosting
             var environmentOption = new System.CommandLine.Option<
                 string
             >(
-                name: "--environments",
+                name: "--environment",
                 description:
                 "Path to the AAS environment serialized as a JSON file " +
                 "to be split into different files for static hosting"

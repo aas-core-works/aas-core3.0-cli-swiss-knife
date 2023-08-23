@@ -345,7 +345,7 @@ Usage:
   aas-core3.0-sk-split-environment-for-static-hosting [options]
 
 Options:
-  --environments <environments> (REQUIRED)  
+  --environment <environment> (REQUIRED)
   Path to the AAS environment serialized as a JSON file to be split into different files 
   for static hosting
   --output-dir <output-dir> (REQUIRED)      
