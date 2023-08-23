@@ -40,6 +40,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplitEnvironmentForStaticHo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplitEnvironmentForStaticHosting.Tests", "SplitEnvironmentForStaticHosting.Tests\SplitEnvironmentForStaticHosting.Tests.csproj", "{02BEE479-CA0E-47CD-BB03-C7CAD25D0474}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RenderEnvironmentToHtml", "RenderEnvironmentToHtml\RenderEnvironmentToHtml.csproj", "{0199199F-7814-4508-8049-739F50708911}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RenderEnvironmentToHtml.Tests", "RenderEnvironmentToHtml.Tests\RenderEnvironmentToHtml.Tests.csproj", "{AF8D7FD3-49E4-43B5-B857-198A58F7000C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -134,5 +138,13 @@ Global
 		{02BEE479-CA0E-47CD-BB03-C7CAD25D0474}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02BEE479-CA0E-47CD-BB03-C7CAD25D0474}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02BEE479-CA0E-47CD-BB03-C7CAD25D0474}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0199199F-7814-4508-8049-739F50708911}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0199199F-7814-4508-8049-739F50708911}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0199199F-7814-4508-8049-739F50708911}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0199199F-7814-4508-8049-739F50708911}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF8D7FD3-49E4-43B5-B857-198A58F7000C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF8D7FD3-49E4-43B5-B857-198A58F7000C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF8D7FD3-49E4-43B5-B857-198A58F7000C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF8D7FD3-49E4-43B5-B857-198A58F7000C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

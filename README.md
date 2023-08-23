@@ -17,6 +17,7 @@ Provide a set of command-line utilities to manipulate and convert AAS environmen
 * [aas-core3.0-sk-verify]
 * [aas-core3.0-sk-list-dangling-model-references]
 * [aas-core3.0-sk-split-environment-for-static-hosting]
+* [aas-core3.0-sk-render-environment-to-html]
 
 [aas-core3.0-sk-environment-from-csv-concept-descriptions]: #aas-core30-sk-environment-from-csv-concept-descriptions
 [aas-core3.0-sk-environment-from-csv-shells-and-submodels]: #aas-core30-sk-environment-from-csv-shells-and-submodels
@@ -25,6 +26,7 @@ Provide a set of command-line utilities to manipulate and convert AAS environmen
 [aas-core3.0-sk-verify]: #aas-core30-sk-verify
 [aas-core3.0-sk-list-dangling-model-references]: #aas-core30-sk-list-dangling-model-references
 [aas-core3.0-sk-split-environment-for-static-hosting]: #aas-core30-sk-split-environment-for-static-hosting
+[aas-core3.0-sk-render-environment-to-html]: #aas-core30-sk-render-environment-to-html
 
 ## Quickstart
 
@@ -36,8 +38,9 @@ Provide a set of command-line utilities to manipulate and convert AAS environmen
 6) If you want your environment to be completely self-containing, check that you do not have any dangling model references with [aas-core3.0-sk-list-dangling-model-references].
 7) Split the environment to separate files that can be readily served by your web server using [aas-core3.0-sk-split-environment-for-static-hosting].
 8) Configure your web server to serve `index.json` in directories; see [Static Hosting].
+9) If you want the user to have a HTML view of your environment, generate the HTML files using [aas-core3.0-sk-render-environment-to-html], and configure your web server to serve the generated files and directories.
 
-[Static Hosting]: #static-hosting
+10) [Static Hosting]: #static-hosting
 
 ## Philosophy
 
@@ -157,7 +160,7 @@ If you use the toolkit often, you might want to add the directory to your [PATH]
 <!-- Help starts: out\aas-core3.0-sk-environment-from-csv-concept-descriptions.exe --help -->
 ```
 Description:
-  Translate concept descriptions, captured as a pre-defined CSV file, 
+  Translate concept descriptions, captured as a pre-defined CSV file,
   into an AAS environment serialized to JSON.
 
   The expected header is:
@@ -167,14 +170,14 @@ Usage:
   aas-core3.0-sk-environment-from-csv-concept-descriptions [options]
 
 Options:
-  --concept-descriptions <concept-descriptions> (REQUIRED)  
-    One or more files containing the information about the concept descriptions 
+  --concept-descriptions <concept-descriptions> (REQUIRED)
+    One or more files containing the information about the concept descriptions
     in CSV format
-  --output <output> (REQUIRED)                              
+  --output <output> (REQUIRED)
     The JSON file containing the AAS Environment; if '-', output to STDOUT
-  --version                                                 
+  --version
     Show version information
-  -?, -h, --help                                            
+  -?, -h, --help
     Show help and usage information
 ```
 <!-- Help ends: out\aas-core3.0-sk-environment-from-csv-concept-descriptions.exe --help -->
@@ -203,7 +206,7 @@ Please [create an issue] to give us your feedback how you expect this interface 
 <!-- Help starts: out\aas-core3.0-sk-environment-from-csv-shells-and-submodels.exe --help -->
 ```
 Description:
-  Translate asset administration shells and submodels from a pre-defined CSV table to 
+  Translate asset administration shells and submodels from a pre-defined CSV table to
   an AAS environment serialized to JSON.
 
   The expected header is:
@@ -214,14 +217,14 @@ Usage:
   aas-core3.0-sk-environment-from-csv-shells-and-submodels [options]
 
 Options:
-  --assets-and-submodels <assets-and-submodels> (REQUIRED)  
-    One or more files containing the information about the asset administration shells 
+  --assets-and-submodels <assets-and-submodels> (REQUIRED)
+    One or more files containing the information about the asset administration shells
     and submodels in CSV format
-  --output <output> (REQUIRED)                              
+  --output <output> (REQUIRED)
     The JSON file containing the AAS Environment; if '-', output to STDOUT
-  --version                                                 
+  --version
     Show version information
-  -?, -h, --help                                            
+  -?, -h, --help
     Show help and usage information
 ```
 <!-- Help ends: out\aas-core3.0-sk-environment-from-csv-shells-and-submodels.exe --help -->
@@ -240,7 +243,7 @@ Depending on the class of the submodel element, you have to specify different co
 For example, the column `Semantic ID` can be specified for all the classes of submodel elements.
 However, `Content Type` is to be specified only for [File]'s, while `Min` and `Max` apply only to [Range].
 
-Please see the generated documentation of the meta-model to determine which columns are applicable: [File], [Property], [Range].  
+Please see the generated documentation of the meta-model to determine which columns are applicable: [File], [Property], [Range].
 
 # aas-core3.0-sk-merge-environments
 
@@ -253,13 +256,13 @@ Usage:
   aas-core3.0-sk-merge-environments [options]
 
 Options:
-  --environments <environments> (REQUIRED)  
+  --environments <environments> (REQUIRED)
     Paths to two or more AAS environments serialized to JSON to be merged
-  --output <output> (REQUIRED)              
+  --output <output> (REQUIRED)
     Path to the merged environment; if '-', the output is written to STDOUT
-  --version                                 
+  --version
     Show version information
-  -?, -h, --help                            
+  -?, -h, --help
     Show help and usage information
 ```
 <!-- Help ends: out\aas-core3.0-sk-merge-environments.exe --help -->
@@ -269,22 +272,22 @@ Options:
 <!-- Help starts: out\aas-core3.0-sk-tree-shake-concept-descriptions.exe --help -->
 ```
 Description:
-  Remove concept descriptions which are not directly referenced as model references 
+  Remove concept descriptions which are not directly referenced as model references
   through semantic IDs.
 
 Usage:
   aas-core3.0-sk-tree-shake-concept-descriptions [options]
 
 Options:
-  --environment <environment> (REQUIRED)  
-    Path to the AAS environment serialized to JSON from which we remove 
+  --environment <environment> (REQUIRED)
+    Path to the AAS environment serialized to JSON from which we remove
     the concept descriptions not referenced in any semantic ID
-  --output <output> (REQUIRED)            
-    Path to the environment without unreferenced concept descriptions; 
+  --output <output> (REQUIRED)
+    Path to the environment without unreferenced concept descriptions;
     if '-', the output is written to STDOUT
-  --version                               
+  --version
     Show version information
-  -?, -h, --help                          
+  -?, -h, --help
     Show help and usage information
 ```
 <!-- Help ends: out\aas-core3.0-sk-tree-shake-concept-descriptions.exe --help -->
@@ -296,18 +299,18 @@ Options:
 Description:
   Verify that the AAS environment satisfies the meta-model constraints.
 
-  Only constraints are checked that can be enforced without external dependencies 
+  Only constraints are checked that can be enforced without external dependencies
   such as registry or language models.
 
 Usage:
   aas-core3.0-sk-verify [options]
 
 Options:
-  --environment <environment> (REQUIRED)  
+  --environment <environment> (REQUIRED)
   Path to the AAS environment serialized to JSON to be verified
-  -version                               
+  -version
   Show version information
-  -?, -h, --help                          
+  -?, -h, --help
   Show help and usage information
 ```
 <!-- Help ends: out\aas-core3.0-sk-verify.exe --help -->
@@ -323,12 +326,12 @@ Usage:
   aas-core3.0-sk-list-dangling-model-references [options]
 
 Options:
-  --environment <environment> (REQUIRED)  
-  An AAS environment serialized as a JSON file to be searched for dangling model 
+  --environment <environment> (REQUIRED)
+  An AAS environment serialized as a JSON file to be searched for dangling model
   references
-  --version                               
+  --version
   Show version information
-  -?, -h, --help                          
+  -?, -h, --help
   Show help and usage information
 ```
 <!-- Help ends: out\aas-core3.0-sk-list-dangling-model-references.exe --help -->
@@ -338,7 +341,7 @@ Options:
 <!-- Help starts: out\aas-core3.0-sk-split-environment-for-static-hosting.exe --help -->
 ```
 Description:
-  Split an AAS environment into multiple files so that they can be readily served as 
+  Split an AAS environment into multiple files so that they can be readily served as
   static files.
 
 Usage:
@@ -346,15 +349,37 @@ Usage:
 
 Options:
   --environment <environment> (REQUIRED)
-  Path to the AAS environment serialized as a JSON file to be split into different files 
+  Path to the AAS environment serialized as a JSON file to be split into different files
   for static hosting
-  --output-dir <output-dir> (REQUIRED)      
+  --output-dir <output-dir> (REQUIRED)
   Path to the output directory
-  --version                                 
+  --version
   Show version information
-  -?, -h, --help                            
+  -?, -h, --help
   Show help and usage information
 ```
 <!-- Help ends: out\aas-core3.0-sk-split-environment-for-static-hosting.exe --help -->
 
 Please see [Static Hosting] for information about how to set up your web server.
+
+# aas-core3.0-sk-render-environment-to-html
+
+<!-- Help starts: out\aas-core3.0-sk-render-environment-to-html.exe --help -->
+```
+Description:
+  Render an AAS environment into multiple HTML files.
+
+Usage:
+  aas-core3.0-sk-render-environment-to-html [options]
+
+Options:
+  --environment <environment> (REQUIRED)
+  Path to the AAS environment serialized as a JSON file to be rendered into HTML
+  --output-dir <output-dir> (REQUIRED)
+  Path to the output directory
+  --version
+  Show version information
+  -?, -h, --help
+  Show help and usage information
+```
+<!-- Help ends: out\aas-core3.0-sk-split-environment-for-static-hosting.exe --help -->
